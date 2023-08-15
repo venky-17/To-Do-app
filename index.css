@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(90deg, hsla(47, 100%, 87%, 1) 0%, hsla(334, 81%, 60%, 1) 50%, hsla(237, 64%, 56%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(47, 100%, 87%, 1) 0%, hsla(334, 81%, 60%, 1) 50%, hsla(237, 64%, 56%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(47, 100%, 87%, 1) 0%, hsla(334, 81%, 60%, 1) 50%, hsla(237, 64%, 56%, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFF1BF", endColorstr="#EC458D", GradientType=1);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.app {
+    background: whitesmoke;
+    padding: 2rem;
+    border: none;
+    border-radius: 8px;
+    align-items: center;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: 3px solid black;
+}
+
+.addTask {
+    text-align: center;
+    width: auto;
+    font-size: 1.3rem;
+    padding: 10px;
+    font-weight: bold;
+    background-color: orange;
+    border: navajowhite;
+    margin: 1rem;
+    border-radius: 4px;
+}
+
+.listItems {
+    list-style: none;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 12px;
+}
+
+.listItems li {
+    margin: 10px 0;
+    position: relative; 
+    margin-left: 20px;
+   
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    left: -30px; /* Adjust the position to your preference */
+    top: 50%; /* Center the bullet vertically */
+    transform: translateY(-50%);
+    height: 23px;
+    width: 23px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+li.checked{
+    text-decoration: line-through;
+}
+li.checked::before{
+    background-color: orange;
+
+    content: '✔️';
+    align-items: center;
+    font-size: 19px;
+}
+
+ul li span{
+    float: right;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+   
+}
+ul li span:hover{
+    background-color: whitesmoke;
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: black;
+}
