@@ -1,6 +1,8 @@
 const taskInput = document.querySelector('.inputTask')
 const addBtn = document.querySelector('.addTask')
 const taskList = document.querySelector('.listItems')
+const themeBtn = document.querySelector('.theme')
+const appDiv= document.querySelector('#app')
 
 function addTask(){
 if(taskInput.value === ''){
@@ -28,7 +30,7 @@ function markChecked(e){
         e.target.parentElement.remove()
         saveData()
     } 
-    console.log('dbbjbdj');
+   
 }
 
 function saveData(){
@@ -50,3 +52,20 @@ document.addEventListener("keydown", function(event) {
 
   }
 });
+
+const changeTheme=()=>{
+    let currentClass = appDiv.className;
+
+    console.log(currentClass);
+   if(currentClass==="light"){
+    appDiv.classList.remove('light')
+    appDiv.classList.add('dark')
+   } else{
+    appDiv.classList.remove('dark')
+    appDiv.classList.add('light')
+   }
+
+}
+
+
+themeBtn.addEventListener('click', changeTheme)

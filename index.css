@@ -26,8 +26,8 @@ h1 {
     margin: 1rem;
 }
 
-.app {
-    background: whitesmoke;
+#app {
+   
     padding: 2rem;
     border: none;
     border-radius: 8px;
@@ -103,4 +103,19 @@ ul li span:hover{
     cursor: pointer;
     color: whitesmoke;
     background-color: black;
+}
+.theme{
+    height: 50px;
+    width: 50px;
+    float: right;
+    margin-top: 10px;
+    border: none;
+}
+.dark{
+    background: #3F3F3F;
+    color: white;
+}
+.light{
+    background: white;
+    color:black ;
 }
