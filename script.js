@@ -40,3 +40,13 @@ function getData(){
 getData()
 taskList.addEventListener('click', markChecked)
 addBtn.addEventListener('click', addTask)
+
+document.addEventListener("keydown", function(event) {
+    
+  if (event.key === "Enter" && taskInput.value !==''  ) {
+  addTask()
+  
+    
+
+  }
+});
